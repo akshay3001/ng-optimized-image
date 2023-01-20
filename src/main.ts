@@ -7,6 +7,7 @@ import { PhotosContainerComponent } from './app/photos/photos-container/photos-c
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'photos' },
   { path: 'photos', component: PhotosContainerComponent },
+  { path: '**', component: PhotosContainerComponent },
 ];
 
 bootstrapApplication(AppComponent, {
