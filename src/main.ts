@@ -1,3 +1,4 @@
+import { provideHttpClient } from '@angular/common/http';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
@@ -8,9 +9,6 @@ const routes: Routes = [
   { path: 'photos', component: PhotosContainerComponent },
 ];
 
-
 bootstrapApplication(AppComponent, {
-  providers: [
-    provideRouter(routes)
-  ]
-})
+  providers: [provideRouter(routes), provideHttpClient()],
+});
