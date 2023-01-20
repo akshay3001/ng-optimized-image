@@ -1,19 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Photo } from '../shared/models/photos.model';
 
 @Component({
   selector: 'app-photos-item',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
+  imports: [CommonModule],
   template: `
-    <img
-      [ngSrc]="photo.url"
-      width="600"
-      height="600"
-      [alt]="photo.title"
-      [priority]="index === 0 || index === 1"
-    />
+    <img [src]="photo.url" width="600" height="600" [alt]="photo.title" />
     <p>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita id
       totam deleniti, sit qui officiis praesentium modi quis eius sapiente
