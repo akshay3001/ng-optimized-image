@@ -1,8 +1,12 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
+import { PhotosContainerComponent } from './app/photos/photos-container/photos-container.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'photos' },
+  { path: 'photos', component: PhotosContainerComponent },
+];
 
 
 bootstrapApplication(AppComponent, {
